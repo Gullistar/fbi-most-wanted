@@ -51,6 +51,15 @@
   border-style: solid;
 }
 
+.no-results {
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 2rem;
+}
+
 .table-item {
   display: flex;
   flex-direction: row;
@@ -61,8 +70,11 @@
   cursor: pointer;
 }
 
-.table-item::after {
-  height: 100%;
+.selected {
+  background-color: lightblue;
+}
+.details-panel {
+  width: 90%;
 }
 
 .name-container {

@@ -6,6 +6,13 @@ interface ApiItem {
   uid: string;
   title: string;
   description: string;
+  ailiases: string;
+  dates_of_birth_used: Array<{
+    date: string;
+    year: string;
+  }>;
+  nationality: string;
+  reward_text: string;
   images: Array<{
     original: string;
     large: string;
@@ -37,6 +44,7 @@ const App: React.FC = () => {
         }
         const result: ApiResponse = await response.json();
         setData(result.items);
+        console.log(result.items[0]);
       } catch (error) {
         setError(error as Error);
       } finally {
@@ -92,7 +100,6 @@ const App: React.FC = () => {
                   : filter === "asc"
                   ? "A → Z"
                   : "Z → A"}
-                <label htmlFor="filter button"></label>
               </button>
             </th>
             <th className="image-container">Image</th>
@@ -100,6 +107,9 @@ const App: React.FC = () => {
           </tr>
         </thead>
         <tbody>
+          {/* {filteredData.length < 1 && (
+            <h2 className="no-results">No Results</h2>
+          )} */}
           {filteredData.map((item) => (
             <tr
               key={item.uid}
