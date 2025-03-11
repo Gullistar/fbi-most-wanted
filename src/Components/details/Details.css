@@ -1,0 +1,13 @@
+.details-container {
+  position: fixed;
+  top: 10%;
+  width: 90%;
+  background-color: lightblue;
+  padding: 1rem;
+}
+
+.detail-image-container {
+  width: 10rem;
+  flex-direction: row;
+  display: flex;
+}

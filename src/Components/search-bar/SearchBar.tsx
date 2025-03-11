@@ -1,11 +1,5 @@
-import { ChangeEvent } from "react";
-
-interface SearchBarProps {
-  value: string;
-  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string;
-}
-
+import { SearchBarProps } from "./types";
+import "./SearchBar.css";
 const SearchBar = ({ value, onChange, placeholder }: SearchBarProps) => {
   return (
     <input
