@@ -1,7 +1,6 @@
-import { ApiItem } from "../../App";
+import { WantedPerson } from "../../api/endpoints/wanted/types";
 
 export interface DetailProps {
-  isOpen: boolean;
   onClose: () => void;
-  item: ApiItem | null;
+  item: WantedPerson | null;
 }

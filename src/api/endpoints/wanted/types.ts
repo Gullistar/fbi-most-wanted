@@ -22,7 +22,7 @@ interface WantedImage {
   thumb: string | null;
 }
 
-interface WantedPerson {
+export interface WantedPerson {
   pathId: string | null;
   uid: string | null;
   title: string | null;
